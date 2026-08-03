@@ -28,7 +28,8 @@ class Solution {
         for(int i=0; i<m; i++){
             List<Integer> karish = as.get(i);
             for(int j=0; j<n; j++){
-                score[i][j] = karish.get(j);
+                int kl = karish.get(j);
+                score[i][j] = kl;
             }
         }
         return score;
