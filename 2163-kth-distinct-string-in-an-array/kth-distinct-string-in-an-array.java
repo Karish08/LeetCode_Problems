@@ -4,10 +4,10 @@ class Solution {
         for(String m : arr){
             ak.put(m, ak.getOrDefault(m, 0)+1);
         }
-        if(k > 0) k--;
+        k--;
         for(var entry : ak.entrySet()){
             if(entry.getValue() != 1) continue;
-            else if(entry.getValue() == 1 && k == 0) return entry.getKey();
+            if(entry.getValue() == 1 && k == 0) return entry.getKey();
             else k--;
         }return "";
     }
