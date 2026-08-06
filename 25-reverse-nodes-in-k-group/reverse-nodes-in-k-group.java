@@ -34,7 +34,7 @@ class Solution {
                right--;
            }
         }
-        System.out.println(Arrays.toString(ak));
+        // System.out.println(Arrays.toString(ak));
         ListNode m = new ListNode(0);
         ListNode temp = m;
         for(int i : ak){
