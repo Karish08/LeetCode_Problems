@@ -13,10 +13,6 @@ class Solution {
         for(var entry : m.entrySet()){
             if(entry.getValue() == 1) ak.add(entry.getKey());
         }
-        String mk[] = new String[ak.size()];
-        int index = 0;
-        for(String o : ak){
-            mk[index++] = o;
-        }return mk;
+        return ak.toArray(new String[0]);
     }
 }
