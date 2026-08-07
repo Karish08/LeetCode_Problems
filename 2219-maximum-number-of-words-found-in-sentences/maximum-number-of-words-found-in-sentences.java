@@ -1,10 +1,12 @@
 class Solution {
-    public int mostWordsFound(String[] sentences) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b) -> b - a);
+    public int mostWordsFound(String[] sentences) { 
+        int kb[] = new int [sentences.length];
+        int i = 0;       
         for(String m : sentences){
             String ak[] = m.split("\\s+");
-            pq.offer(ak.length);
-        }
-        return pq.poll();
+            kb[i++] = ak.length;
+        }  
+        Arrays.sort(kb);
+        return kb[kb.length - 1];      
     }
 }
