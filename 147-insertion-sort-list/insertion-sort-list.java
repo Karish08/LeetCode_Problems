@@ -18,10 +18,10 @@ class Solution {
         }
         Collections.sort(ak);
         ListNode m = new ListNode(0);
-        ListNode temp = m;
+        curr = m;
         for(int i : ak){
-            temp.next = new ListNode(i);
-            temp = temp.next;
+            curr.next = new ListNode(i);
+            curr = curr.next;
         }return m.next;
     }
 }
