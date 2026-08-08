@@ -7,7 +7,7 @@ class Solution {
                    if(i != j){
                         for(int z = 0; z < digits.length; z++){
                             if((z != i && z != j)){
-                                int sum = (digits[i] * 10 + digits[j]) * 10 + digits[z];
+                                int sum = digits[i] * 100 + digits[j] * 10 + digits[z];
                                 if(sum % 2 == 0){
                                    ak.add(sum);
                                 }
