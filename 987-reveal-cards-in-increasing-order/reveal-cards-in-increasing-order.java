@@ -5,7 +5,7 @@ class Solution {
         ak.offer(deck[deck.length - 1]);
         for(int i = deck.length - 2; i >= 0; i--){
             Queue<Integer> kb = new LinkedList<>();
-            while(!(ak.isEmpty()) && ak.size() != 1){
+            while(ak.size() != 1){
                 kb.offer(ak.poll());
             }
             //  m = 0;
