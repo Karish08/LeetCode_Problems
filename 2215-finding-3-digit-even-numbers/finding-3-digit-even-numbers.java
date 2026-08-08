@@ -1,6 +1,6 @@
 class Solution {
     public int[] findEvenNumbers(int[] digits) {
-        Set<Integer> ak = new TreeSet<>();
+        Set<Integer> ak = new HashSet<>();
         for(int i = 0; i< digits.length; i++){
             if(digits[i] != 0){
                 for(int j = 0; j< digits.length; j++){
@@ -22,6 +22,7 @@ class Solution {
         for(int i : ak){
            kb[m++] = i; 
         }
+        Arrays.sort(kb);
         return kb;
     }
 }
