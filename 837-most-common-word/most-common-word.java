@@ -1,10 +1,11 @@
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
         paragraph = paragraph.replaceAll("[!?',;.]"," ");
+        paragraph = paragraph.toLowerCase();
         String m[] = paragraph.split("\\s+");
         Map<String, Integer> ak = new HashMap<>();
         for(String s : m){
-             s = s.toLowerCase();
+            //  s = s.toLowerCase();
              ak.put(s, ak.getOrDefault(s,0) + 1);
         }
         PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>((a, b) -> {
