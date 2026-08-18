@@ -6,7 +6,7 @@ class Solution {
        } 
        int n = nums.length;
        k = k % n;
-       k = (n - k) % n;
+       k = (n - k);
        for(int i = 0; i<k; i++){
           ak.offer(ak.poll());
        }
