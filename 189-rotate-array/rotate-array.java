@@ -8,7 +8,8 @@ class Solution {
        k = k % n;
        k = (n - k);
        for(int i = 0; i<k; i++){
-          ak.offer(ak.poll());
+          int m = ak.poll();  
+          ak.offer(m);
        }
        for(int i = 0; i<n; i++){
           nums[i] = ak.poll();
