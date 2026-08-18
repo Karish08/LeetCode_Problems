@@ -4,12 +4,13 @@ class Solution {
        for(int i : nums){
         ak.offer(i);
        } 
-       k = k % nums.length;
-       k = (nums.length - k) % nums.length;
+       int n = nums.length;
+       k = k % n;
+       k = (n - k) % n;
        for(int i = 0; i<k; i++){
           ak.offer(ak.poll());
        }
-       for(int i = 0; i<nums.length; i++){
+       for(int i = 0; i<n; i++){
           nums[i] = ak.poll();
        }
     }
