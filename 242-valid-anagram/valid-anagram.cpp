@@ -1,16 +1,19 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        vector<int> freq1(26);
-        vector<int> freq2(26);
-        for(int i = 0;i < s.size(); i++){
-            freq1[s[i] - 'a']++;
+        map<char, int> ak;
+        map<char, int> kb;
+        for(char c : s){
+            ak[c]++;
         }
-        for(int i = 0;i < t.size(); i++){
-            freq2[t[i] - 'a']++;
+        for(char c : t){
+            kb[c]++;
         }
-        for(int i = 0; i<26; i++){
-            if(freq1[i] < freq2[i] || freq1[i] > freq2[i]) return false;
+        for(char c : s){
+            if(ak[c] != kb[c]) return false;
+        }
+        for(char c : t){
+            if(ak[c] != kb[c]) return false;
         }
         return true;
     }
