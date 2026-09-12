@@ -5,7 +5,7 @@ public:
         for(int i : nums){
            ak[i]++;
         }
-        for(auto entry : nums){
+        for(int entry : nums){
             if(ak[entry] > 1) return entry;
         }return 0;
     }
