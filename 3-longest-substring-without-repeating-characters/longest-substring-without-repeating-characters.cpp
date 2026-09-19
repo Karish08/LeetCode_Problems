@@ -16,7 +16,7 @@ public:
            else{
              ak = "";
              count = 1;
-             j = i;
+             j = i + 1;
              ak += s[j];
              i++;
              j++;
