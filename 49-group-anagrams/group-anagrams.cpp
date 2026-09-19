@@ -8,8 +8,8 @@ public:
             ak[key].push_back(m);
         }
         vector<vector<string>> kb;
-        for(auto m : ak){
-            kb.push_back(m.second);
+        for(auto entry : ak){
+            kb.push_back(entry.second);
         }
         return kb;
     }
