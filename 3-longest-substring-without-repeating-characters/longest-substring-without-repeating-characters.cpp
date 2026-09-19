@@ -9,19 +9,20 @@ public:
         while(i < s.size() && j < s.size()){
            if(!ak.contains(s[j])){
               count++;
-              max1 = max(count, max1);
+              if(count > max1) max1 = count; 
               ak += s[j];
               j++;
            }
            else{
              ak = "";
              count = 1;
-             j = i + 1;
-             ak += s[i];
+             j = i;
+             ak += s[j];
              i++;
+             j++;
            }
         }
-         max1 = max(count, max1);
+         if(count > max1) max1 = count; 
          return max1;
     }
 };
