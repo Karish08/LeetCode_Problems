@@ -6,7 +6,7 @@ public:
         int max1 = 0;
         while(left < right){
             int area = min(height[left], height[right]) * (right - left);
-            max1 = max(max1, area);
+            if(max1 < area) max1 = area;
             if(height[left] < height[right]) left++;
             else right--;
         }
