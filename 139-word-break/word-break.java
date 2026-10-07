@@ -10,7 +10,7 @@ class Solution {
                 }
             }
         }
-        if(ak[ak.length - 1] == true) return true;
-        return false; 
+        // if( == true) return true;
+        return ak[ak.length - 1]; 
     }
 }
